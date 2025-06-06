@@ -24,6 +24,10 @@
 		A86108432DE8D94F00C67505 /* RealmStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86108422DE8D94F00C67505 /* RealmStorage.swift */; };
 		A862FABA2DF353E30004ACD0 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A862FAB92DF353E30004ACD0 /* Coordinator.swift */; };
 		A862FABC2DF35AF50004ACD0 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A862FABB2DF35AF50004ACD0 /* BaseCoordinator.swift */; };
+		A862FABE2DF363030004ACD0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A862FABD2DF363030004ACD0 /* AppCoordinator.swift */; };
+		A862FAC02DF366B30004ACD0 /* TaskListsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A862FABF2DF366B30004ACD0 /* TaskListsCoordinator.swift */; };
+		A862FAC22DF36DDD0004ACD0 /* TasksCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A862FAC12DF36DDD0004ACD0 /* TasksCoordinator.swift */; };
+		A862FAC42DF36E680004ACD0 /* TaskListEditorCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A862FAC32DF36E680004ACD0 /* TaskListEditorCoordinator.swift */; };
 		A898EC0A2DCCA7490059B0EE /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A898EC092DCCA7490059B0EE /* TaskList.swift */; };
 		A898EC2D2DD26ACB0059B0EE /* TaskEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A898EC2B2DD26ACB0059B0EE /* TaskEntity+CoreDataClass.swift */; };
 		A898EC2E2DD26ACB0059B0EE /* TaskEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A898EC2C2DD26ACB0059B0EE /* TaskEntity+CoreDataProperties.swift */; };
@@ -60,6 +64,10 @@
 		A86108422DE8D94F00C67505 /* RealmStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStorage.swift; sourceTree = "<group>"; };
 		A862FAB92DF353E30004ACD0 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A862FABB2DF35AF50004ACD0 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		A862FABD2DF363030004ACD0 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		A862FABF2DF366B30004ACD0 /* TaskListsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListsCoordinator.swift; sourceTree = "<group>"; };
+		A862FAC12DF36DDD0004ACD0 /* TasksCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksCoordinator.swift; sourceTree = "<group>"; };
+		A862FAC32DF36E680004ACD0 /* TaskListEditorCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListEditorCoordinator.swift; sourceTree = "<group>"; };
 		A898EC092DCCA7490059B0EE /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
 		A898EC2B2DD26ACB0059B0EE /* TaskEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A898EC2C2DD26ACB0059B0EE /* TaskEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -131,8 +139,12 @@
 		A862FAB82DF353C60004ACD0 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				A862FABB2DF35AF50004ACD0 /* BaseCoordinator.swift */,
 				A862FAB92DF353E30004ACD0 /* Coordinator.swift */,
+				A862FABB2DF35AF50004ACD0 /* BaseCoordinator.swift */,
+				A862FABD2DF363030004ACD0 /* AppCoordinator.swift */,
+				A862FABF2DF366B30004ACD0 /* TaskListsCoordinator.swift */,
+				A862FAC12DF36DDD0004ACD0 /* TasksCoordinator.swift */,
+				A862FAC32DF36E680004ACD0 /* TaskListEditorCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -352,6 +364,7 @@
 				A862FABA2DF353E30004ACD0 /* Coordinator.swift in Sources */,
 				A81D36ED2DE4E35F00E17A42 /* AlertContext.swift in Sources */,
 				A81D36A52DDBA87200E17A42 /* PersistentController.swift in Sources */,
+				A862FAC22DF36DDD0004ACD0 /* TasksCoordinator.swift in Sources */,
 				A8BA84582DC9271900D3B126 /* AppDelegate.swift in Sources */,
 				A8BA84592DC9271900D3B126 /* SceneDelegate.swift in Sources */,
 				A8BA846C2DC93BDC00D3B126 /* Extension + UIView.swift in Sources */,
@@ -367,6 +380,8 @@
 				A898EC3C2DD658340059B0EE /* TaskListsViewController.swift in Sources */,
 				A862FABC2DF35AF50004ACD0 /* BaseCoordinator.swift in Sources */,
 				A81D369F2DDB488100E17A42 /* TaskListCell.swift in Sources */,
+				A862FAC42DF36E680004ACD0 /* TaskListEditorCoordinator.swift in Sources */,
+				A862FABE2DF363030004ACD0 /* AppCoordinator.swift in Sources */,
 				A898EC432DD65F7E0059B0EE /* TaskListEntity+CoreDataClass.swift in Sources */,
 				A81D36F52DE4FFAA00E17A42 /* TaskEditorViewModel.swift in Sources */,
 				A81D36A12DDBA33F00E17A42 /* Storage.swift in Sources */,
@@ -377,6 +392,7 @@
 				A81D36F32DE4EE5700E17A42 /* Extension + String.swift in Sources */,
 				A8BA846F2DC93DBA00D3B126 /* Metrics.swift in Sources */,
 				A898EC3E2DD65A830059B0EE /* NavigationBarBuilder.swift in Sources */,
+				A862FAC02DF366B30004ACD0 /* TaskListsCoordinator.swift in Sources */,
 				A81D369C2DDB456E00E17A42 /* SwipeActionsBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
