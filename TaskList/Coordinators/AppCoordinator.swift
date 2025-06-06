@@ -27,7 +27,7 @@ final class AppCoordinator: BaseCoordinator {
     override func start() {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
-        showTasksFlow()
+        showMainFlow()
     }
 }
 
@@ -35,7 +35,7 @@ final class AppCoordinator: BaseCoordinator {
 private extension AppCoordinator {
 
     /// Запускает координатор списка задач
-    func showTasksFlow() {
+    func showMainFlow() {
         let tasksCoordinator = TaskListsCoordinator(
             navigationController: navigationController,
             storage: makeStorage()
