@@ -69,6 +69,10 @@ protocol TaskListsViewModelProtocol: AnyObject {
     /// - Parameter indexPath: Индекс списка, если редактирование. `nil` — если создание
     /// - Returns: Структура `AlertContext`, содержащая все UI-компоненты для отображения алерта
     func alertContext(for indexPath: IndexPath?) -> AlertContext
+    
+    func didSelectRow(at indexPath: IndexPath)
+    
+    func didTapAddButton()
 }
 
 /// Модель представления, инкапсулирующая бизнес-логику списка задач
@@ -77,6 +81,7 @@ final class TaskListsViewModel {
     // MARK: - Public API
     var onListsUpdated: ((ListUpdate) -> Void)?
     var onError: ((any Error) -> Void)?
+    weak var output: TaskListsOutput?
     
     var numberOfLists: Int {
         taskLists.count
@@ -222,6 +227,15 @@ extension TaskListsViewModel: TaskListsViewModelProtocol {
         } else {
             AlertContext(withStatus: .createList)
         }
+    }
+    
+    func didSelectRow(at indexPath: IndexPath) {
+        let taskList = taskLists[indexPath.row]
+        output?.didSelect(taskList: taskList)
+    }
+
+    func didTapAddButton() {
+        output?.didTapAddList()
     }
 }
 

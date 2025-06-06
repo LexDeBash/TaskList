@@ -58,6 +58,9 @@ extension TaskListsViewController {
 // MARK: - UITableViewDelegate
 extension TaskListsViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didSelectRow(at: indexPath)
+        tableView.deselectRow(at: indexPath, animated: false)
+        /*
         let tasksViewModel = viewModel.tasksViewModel(for: indexPath)
         let tasksVC = TasksViewController(viewModel: tasksViewModel) { [weak self] in
             guard let self else { return }
@@ -65,7 +68,7 @@ extension TaskListsViewController {
         }
         
         navigationController?.pushViewController(tasksVC, animated: true)
-        tableView.deselectRow(at: indexPath, animated: false)
+        */
     }
     
     override func tableView(
@@ -192,7 +195,8 @@ private extension TaskListsViewController {
 // MARK: - Actions
 private extension TaskListsViewController {
     @objc func addTaskList() {
-        showAlert()
+        viewModel.didTapAddButton()
+//        showAlert()
     }
     
     @objc func sortChanged(_ sender: UISegmentedControl) {
